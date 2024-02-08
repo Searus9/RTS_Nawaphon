@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class Unit : MonoBehaviour
 {
     [SerializeField] private int id;
@@ -47,6 +48,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private Faction faction;
 
     [SerializeField] private GameObject selectionVisual;
+
     public GameObject SelectionVisual { get { return selectionVisual; } }
     void Awake()
     {
@@ -100,4 +102,16 @@ public class Unit : MonoBehaviour
                 break;
         }
     }
+
+    [System.Serializable]
+
+    public struct UnitCost
+    {
+        public int food;
+        public int wood;
+        public int gold;
+        public int stone;
+
+    }
+
 }
